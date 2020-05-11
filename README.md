@@ -1,6 +1,6 @@
-A bash guessing game
+A bash guessing game for The Unix Workbench
 
 
-**Date**: Thu May  7 08:30:21 IST 2020
+**Date**: Mon May 11 17:25:45 IST 2020
 
-**Number of lines in guessinggame.sh:** 25
+Number of lines in guessinggame.sh: 31

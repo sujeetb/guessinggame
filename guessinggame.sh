@@ -1,25 +1,29 @@
 #!/usr/bin/env bash
 
+echo "How many files are there in the current directory? Take a guess."
+read response
 
-function user_guess {
-	echo "How many files are there in the current directory? Take a guess."
-	read response
-    files=$(ls -1 | wc -l)
+
+function actual_number {
+
+	local filesizee=$(ls -l | wc -l)-1
+	echo $filesizee	
 }
 
-user_guess
+correctnumber=$(actual_number)
 
-while [[ $response -ne $files ]]
+while [[ $response -ne $correctnumber ]]
 do
-	if [[ $response -lt $files ]] 
+	if [[ $response -lt $correctnumber ]] 
 	then
 		echo "Your guess is too low."
 	else
 		echo "Your guess is too high."
 	fi
-	user_guess
+	
+	echo "How many files are there in the current directory? Take another guess."
+	read response
+	
 done
 
 echo "Congratulations! Your guess is correct."
-
-
